@@ -10,8 +10,41 @@
   html, body { 
     background: black 
   }
+
+  .abx span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .abx span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .abx:hover span {
+    padding-right: 25px;
+  }
+
+  .abx:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
   </style>
 </head>
+<script>
+ function pictureChange() {
+      document.getElementById('theImage').src="img/collection.jpg";
+  }
+</script>
+
 <body>
 
   <div class="lcars-container">
@@ -60,16 +93,17 @@
       <!-- CENTER SECTION
       =========================================================== -->
       <div class="lcars-column u-6-8">
-        <div class="lcars-row">
-          <div class="lcars-column u-1-3">
-            <img src="img/test.jpg" alt="Mountain View" style="width:304px;height:228px;">
+        <div class="lcars-row " >
+          <img id="theImage" src="img/o_collection.jpg" alt="view" style="width:920px; height:250px;">
+          <!-- <div class="lcars-column u-1-3">
+            <img src="img/test.jpg" alt="view" style="width:304px; height:228px;">
           </div>
           <div class="lcars-column u-1-3">
-            <img src="img/test.jpg" alt="Mountain View" style="width:304px;height:228px;">
+            <img src="img/test.jpg" alt="view" style="width:304px;height:228px;">
           </div>
           <div class="lcars-column u-1-3">
-            <img src="img/test.jpg" alt="Mountain View" style="width:304px;height:228px;">
-          </div>
+            <img src="img/test.jpg" alt="view" style="width:304px;height:228px;">
+          </div> -->
         </div>
       </div>
 
@@ -101,10 +135,7 @@
       <div class="lcars-column u-6-8 lcars-divider bottom lcars-tan-blue-divide">
         <div class="lcars-row">
           <div class="lcars-column u-1-2">
-            <!--<a href="#" class="lcars-button radius">Button 3</a>
-          </div>
-          <div class="lcars-column u-1-2">
-            <a href="#" class="lcars-button radius">Button 4</a> -->
+            <button id="theButton" class="lcars-button radius abx" onclick="pictureChange()" ><span> CLICK ME </span> </button>
           </div>
         </div>
       </div>
@@ -116,6 +147,12 @@
       </div>
     </div>
 
+    <p style="font-family: Georgia; background-color:#7e7e7e;" > 
+      </br>My idea was formed on the road trip to Vermont during the fall break. My friend photobombed the beautiful maple leaves view by posturing like an artifact he bought in a thrift shop. (You probably familiar with the figure that I used!)  When I looked back to my photo collection, I found many interesting places that I wanted to share with friends. I picked a bakery in Aachen, and the Hyde park in London and the Giant Causeway in Northern Ireland.
+
+      </br>The website theme was inspired by Professor Ferro. She told me that this idea was like the teleportation machine in <i>Star Trek</i> so I adopted the idea by applying the computer interface in <i>Star Trek</i>. 
+
+      </br>While doing the altered reality project, I learned how to cast shadows through online tutorial and reviewed how to use color range to select object. </br> </p>
   </div>
 
 </body>
