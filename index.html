@@ -36,17 +36,42 @@
     right: 0;
   }
 
-
+  .text-frame {
+    margin: 20px;
+    font-family: Georgia;
+  }
   </style>
 </head>
+
 <script>
  function pictureChange() {
-      document.getElementById('theImage').src="img/collection.jpg";
+    var buttonText= document.getElementById("theButton");
+    if (buttonText.innerText === "CLICK ME") {
+      buttonText.innerText = "BACK";
+      document.getElementById('theImage').src="img/collection.jpg";    
+    }
+    else if (buttonText.innerText === "BACK") {
+      buttonText.innerText = "CLICK ME";
+      document.getElementById('theImage').src="img/o_collection.jpg";
+      location.reload();
+    }
   }
+  // $('#updown1').click(function(){
+  //     // to change button label
+  //     $('#pressure_cands .ui-btn-text').html('THP');
+  //     // call popupBasic-screen click event to hide popup menu
+  //     $('#popupBasic-screen').click();
+  // });
+  // $('#updown2').click(function(){
+  //     // to change button label
+  //     $('#pressure_cands .ui-btn-text').html('FBHP');
+  //     // call popupBasic-screen click event to hide popup menu
+  //     $('#popupBasic-screen').click();
+  // });​
 </script>
 
 <body>
-
+</br>
   <div class="lcars-container">
     <!-- TOP ROW
     =========================================================== -->
@@ -93,8 +118,8 @@
       <!-- CENTER SECTION
       =========================================================== -->
       <div class="lcars-column u-6-8">
-        <div class="lcars-row " >
-          <img id="theImage" src="img/o_collection.jpg" alt="view" style="width:920px; height:250px;">
+        <div class="lcars-row" >
+          <img id="theImage" src="img/o_collection.jpg" alt="view" align="middle" style="width:920px; height:250px;">
           <!-- <div class="lcars-column u-1-3">
             <img src="img/test.jpg" alt="view" style="width:304px; height:228px;">
           </div>
@@ -134,25 +159,28 @@
       =========================================================== -->
       <div class="lcars-column u-6-8 lcars-divider bottom lcars-tan-blue-divide">
         <div class="lcars-row">
-          <div class="lcars-column u-1-2">
+          <div class="lcars-column u-1-4">
             <button id="theButton" class="lcars-button radius abx" onclick="pictureChange()" ><span> CLICK ME </span> </button>
           </div>
         </div>
       </div>
-
       <!-- BOTTOM RIGHT ELBOW
       =========================================================== -->
       <div class="lcars-column u-1-8 lcars-elbow right top lcars-blue-bg">
         <a href="#">DA CUR</a>
       </div>
     </div>
+    <div class="text-frame">
+      <p> 
+        </br> &nbsp&nbsp&nbsp&nbsp Do you want to know the SECRET of traveling around the world with a MAGIC TRANSPORTER? It HAS COME REAL! Check this out - someone has scretly been studied for years of how to teleport human beings from one place to another. 
+        </br> (ugh my English..) cannot make up any more...
+        </br>
+        &nbsp&nbsp&nbsp&nbsp My idea was formed on the road trip to Vermont during the fall break. My friend photobombed the beautiful maple leaves view by posturing like an artifact he bought in a thrift shop. (You probably familiar with the figure that I used!)  When I looked back to my photo collection, I found many interesting places that I wanted to share with friends. I picked a bakery in Aachen, and the Hyde park in London and the Giant Causeway in Northern Ireland.
 
-    <p style="font-family: Georgia; " > 
-      </br>My idea was formed on the road trip to Vermont during the fall break. My friend photobombed the beautiful maple leaves view by posturing like an artifact he bought in a thrift shop. (You probably familiar with the figure that I used!)  When I looked back to my photo collection, I found many interesting places that I wanted to share with friends. I picked a bakery in Aachen, and the Hyde park in London and the Giant Causeway in Northern Ireland.
+        </br>&nbsp&nbsp&nbsp&nbspThe website theme was inspired by Professor Ferro. She told me that this idea was like the teleportation machine in <i>Star Trek</i> so I adopted the idea by applying the computer interface in <i>Star Trek</i>. 
 
-      </br>The website theme was inspired by Professor Ferro. She told me that this idea was like the teleportation machine in <i>Star Trek</i> so I adopted the idea by applying the computer interface in <i>Star Trek</i>. 
-
-      </br>While doing the altered reality project, I learned how to cast shadows through online tutorial and reviewed how to use color range to select object. </br> </p>
+        </p>
+    </div>
   </div>
 
 </body>
